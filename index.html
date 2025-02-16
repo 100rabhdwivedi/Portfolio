@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: 'Mazius';
+            src: url('./public/Mazius\ Display\ Extra\ italic.ttf');
+        }
+
+        @font-face {
+            font-family: 'Lay';
+            src: url('./public/Lay\ Grotesk.ttf');
+        }
+
+        @font-face {
+            font-family: 'LayMedium';
+            src: url('./public/Lay\ Grotesk\ Medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'LaySemibold';
+            src: url('./public/Lay\ Grotesk\ Semibold.ttf');
+        }
+
+        @font-face {
+            font-family: 'monogram';
+            src: url('./public/monogram.ttf');
+        }
+
+        @font-face {
+            font-family: 'SpaceMono';
+            src: url('./public/Space\ Mono.ttf');
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar for webkit browsers (Chrome, Safari, etc.) */
+        ::-webkit-scrollbar {
+            width: 6px;
+            /* Smaller scrollbar width for a more minimalistic look */
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #e0e0e0;
+            /* Lighter gray track background for better contrast */
+            border-radius: 10px;
+            /* Rounded track corners for a softer design */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            /* Subtle dark gray color for the thumb */
+            border-radius: 10px;
+            /* Round the corners of the thumb */
+            border: 2px solid transparent;
+            /* Add a subtle transparent border for clean edges */
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            /* Soft inner shadow for depth */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+            /* Darker gray on hover */
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+            /* Slightly stronger shadow on hover */
+            border-color: #666;
+            /* Slight border color change on hover for contrast */
+        }
+
+        ::-webkit-scrollbar-button {
+            background-color: transparent;
+            /* Make the scroll buttons transparent */
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+            /* No visible corner */
+        }
+    </style>
+</head>
+
+<body>
+    <main class=" w-full ">
+        <h1
+            class="font-['monogram'] z-4 fixed bottom-4 right-2 md:right-10 text-white mix-blend-difference text-[0.8rem] md:text-[1.3rem]">
+            { SCROLL } <i class="ri-arrow-down-line"></i></h1>
+        <nav
+            class="flex z-10 justify-between fixed top-0 left-0 w-full px-2 md:px-12 items-center mix-blend-difference border-b-[0.1px] border-[#666666]">
+            <!-- Left section -->
+            <div class="left w-1/2 py-4 md:border-r-[0.1px] md:border-[#666666]">
+                <h2 class="font-['LaySemibold'] text-white">Saurabh<span
+                        class="font-['Mazius'] text-white">Dwivedi</span></h2>
+            </div>
+            <!-- Right section (Desktop) -->
+            <div class="right hidden py-4 md:flex justify-between w-1/2 pl-12 items-center">
+                <a href="#project">
+                    <h2 class="font-['Lay'] text-white text-[0.9rem]"><span class="font-['Mazius'] text-[1rem]">01
+                        </span>Projects</h2>
+                </a>
+                <a href="#about">
+                    <h2 class="font-['Lay'] text-white text-[0.9rem]"><span class="font-['Mazius'] text-[1rem]">02
+                        </span>About</h2>
+                </a>
+                <a href="#contact">
+                    <h2 class="font-['Lay'] text-white text-[0.9rem]"><span class="font-['Mazius'] text-[1rem]">03
+                        </span>Contact</h2>
+                </a>
+            </div>
+            <!-- Right section (Mobile) -->
+            <div class="right block md:hidden py-4">
+                <i class="ri-menu-4-fill text-[1.5rem] text-[#666666]"></i>
+            </div>
+        </nav>
+
+        <!-- Hero Section: Intro and Visual Section -->
+        <section id="home" class="  w-full  h-[100vh] bg-black text-white px-2 md:px-12 flex flex-col justify-evenly">
+            <div class="top pt-4 flex justify-between items-center ">
+                <h1 class="flex items-center gap-2">
+                    <div class="h-1 w-1 bg-white "></div><span
+                        class="font-['Lay'] text-[0.6rem] md:text-[0.9rem]">Website & Visual Developer</span>
+                </h1>
+                <h1 class=" hidden md:block font-['LayMedium'] text-[0.9rem]">Functionality<span
+                        class="font-['Mazius'] ">&Asthetics</span></h1>
+            </div>
+            <div
+                class="content text-center md:text-left flex flex-col-reverse items-center m md:flex-row justify-between md:items-end mt-8">
+                <div
+                    class="con-left mt-12 md:mt-0 w-full md:w-[70%] text-[8vw] leading-[8.5vw] md:text-[5.2vw] md:leading-[5.5vw] font-['LayMedium']">
+                    I am a <span class="font-['Mazius']"> Developer </span> specialising
+                    In crafting digital <span class="font-['Mazius']">experiences.</span>
+
+                </div>
+                <div class="con-right w-[80%] md:w-[30%]">
+                    <img class=" aspect-4/3  md:aspect-3/4 object-cover rounded-xl grayscale transition-all hover:filter-none"
+                        src="./public/img.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="project" class="text-black bg-[#fafafa]   px-2 md:px-12 relative p-1">
+            <h1 class="flex items-center gap-2 mt-20 md:mt-16 sticky top-20 md:top-16 ">
+                <div class="h-1 w-1 bg-black "></div><span
+                    class="font-['LayMedium'] text-[0.6rem] md:text-[1rem] ">Featured work</span>
+            </h1>
+            <div class="w-full mt-32 relative  z-1 bg-[#fafafa]">
+                <div class="w-full md:w-[60%]  hover:bg-white p-3 transition-all ">
+                    <img class="aspect-5/3 object-cover" src="./public/projects/1.png" alt="">
+                    <h1 class="text-[1.8rem] md:text-[3.5vw] font-['LayMedium']">Haunted Website</h1>
+                    <div class="flex gap-4 font-['monogram'] text-[0.9rem] ">
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">HTML</div>
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">TAILWIND </div>
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">THREE JS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-8 relative  z-1  md:flex md:justify-end">
+                <div class="w-full md:w-[60%] hover:bg-white p-3 transition-all">
+                    <img class="aspect-5/3 object-cover" src="./public/projects/2.png" alt="">
+                    <h1 class="text-[1.8rem] md:text-[3.5vw] font-['LayMedium']">Planet Showcase</h1>
+                    <div class="flex gap-4 font-['monogram'] text-[0.9rem] ">
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">HTML</div>
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">TAILWIND </div>
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">THREE JS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-8 relative  z-1 bg-[#fafafa]">
+                <div class="w-full    md:w-[60%] hover:bg-white p-3 transition-all">
+                    <img class="aspect-5/3 object-cover" src="./public/projects/3.png" alt="">
+                    <h1 class="text-[1.8rem] md:text-[3.5vw] font-['LayMedium']">3D Website</h1>
+                    <div class="flex gap-4 font-['monogram'] text-[0.9rem] ">
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">REACT</div>
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">REACT THREE FIBER</div>
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">TAILWIND </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-8  relative  z-1 md:flex md:justify-end">
+                <div class="w-full  md:w-[60%] hover:bg-white p-3 transition-all">
+                    <img class="aspect-5/3 object-cover" src="./public/projects/4.png" alt="">
+                    <h1 class="text-[1.8rem] md:text-[3.5vw] font-['LayMedium']">Website For Client</h1>
+                    <div class="flex gap-4 font-['monogram'] text-[0.9rem] ">
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">REACT</div>
+                        <div class="border-[0.1px] border-[#666666] px-2 py-1/2">REACT THREE FIBER</div>
+                        <div class="border-[0.1px] border-[#666666]  px-2 py-1/2">TAILWIND CSS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="h-300 w-full bg-black relative text-white p-1 ">
+            <div class="px-2 md:px-18 text-center  sticky top-70 left-50 flex flex-col justify-center items-center">
+                <h2 class="font-['monogram'] text-[1.5rem]">{ ABOUT }</h2>
+                <h1 class="text-[2.5rem] leading-[2.7rem] md:text-[5.2vw] md:leading-[5.5vw] font-['LayMedium']">I pair
+                    strong <span class="font-['Mazius']"> visual design </span> skills with a focus on <span
+                        class="font-['Mazius']"> user-centered </span> design.</h1>
+                <p class="md:w-[50%] text-[0.8rem] md:text-[1vw]">As a student passionate about web development, I am
+                    focused on learning and honing my skills to bring creative ideas to life through thoughtful design
+                    and innovative solutions.</p>
+            </div>
+        </section>
+        <!-- Skills section -->
+        <section class="bg-[#fafafa] pb-24  w-full flex flex-col md:flex-row px-2 md:px-12">
+            <div class="left w-full md:w-[40%] text-center md:text-left ">
+                <div class="md:sticky top-24 mt-24">
+                    <h2 class="font-['monogram'] text-[1rem]">{ ABOUT}</h2>
+                    <h1 class="text-[3.5rem] font-['LayMedium']">My Skillset</h1>
+                    <h3 class="font-['Lay']  text-[#666666] text-[1rem] leading-[1.2rem]">Over the course of my career,
+                        I've strived <br class="hidden md:block"> to develop a diverse set of core skills.</h3>
+                </div>
+            </div>
+            <div class="right h-full md:w-[60%]">
+                <div class="w-full mt-24 md:mt-72">
+                    <div
+                        class="h-72 md:h-96 w-full md:w-[50%] border-[2px] border-[#e6e6e6] p-4 flex flex-col justify-between">
+                        <h2 class="font-['monogram'] text-[1.5rem] text-[#666666]">01</h2>
+                        <div>
+                            <h1 class="text-[2rem] font-['LayMedium']">Frontend </h1>
+                            <h1 class="text-[0.9rem] font-['SpaceMono']">React, JavaScript, HTML, CSS, Tailwind CSS</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-end mt-2 md:mt-0 ">
+                    <div
+                        class="h-72 md:h-96 w-full md:w-[50%] border-[2px] border-[#e6e6e6] p-4 flex flex-col justify-between">
+                        <h2 class="font-['monogram'] text-[1.5rem] text-[#666666]">02</h2>
+                        <div>
+                            <h1 class="text-[2rem] font-['LayMedium']">Backend </h1>
+                            <h1 class="text-[0.9rem] font-['SpaceMono']">Node.js, Express.js, MongoDB</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mt-2 md:mt-0 ">
+                    <div
+                        class="h-72 md:h-96 w-full md:w-[50%] border-[2px] border-[#e6e6e6] p-4 flex flex-col justify-between">
+                        <h2 class="font-['monogram'] text-[1.5rem] text-[#666666]">03</h2>
+                        <div>
+                            <h1 class="text-[2rem] font-['LayMedium']">3D & Interactive Web </h1>
+                            <h1 class="text-[0.9rem] font-['SpaceMono']">React Three Fiber, Three.js</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-end mt-2  md:mt-0">
+                    <div
+                        class="h-72 md:h-96 w-full md:w-[50%] border-[2px] border-[#e6e6e6] p-4 flex flex-col justify-between">
+                        <h2 class="font-['monogram'] text-[1.5rem] text-[#666666]">04</h2>
+                        <div>
+                            <h1 class="text-[2rem] font-['LayMedium']">Full-Stack </h1>
+                            <h1 class="text-[0.9rem] font-['SpaceMono']">MERN Stack, API Development</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+            <!-- contact  -->
+
+        <section id="contact"
+            class="h-[100vh] flex flex-col justify-between md:block relative z-5 w-full bg-black text-white px-2 md:px-12 py-1 ">
+            <div class="mt-20 flex justify-end gap-8">
+                <a href="https://linkedin.com/in/saurabh-dwivedi-7b301a334" target="_blank">
+                    <div class="flex gap-2 text-[1rem] font-['monogram'] items-center">
+                        <h1>LINKED IN</h1> <i class="ri-arrow-right-up-line text-[1rem] "></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/saurabh.0__/" target="_blank">
+                    <div class="flex gap-2 text-[1rem] font-['monogram'] items-center">
+                        <h1>INSTAGRAM</h1> <i class="ri-arrow-right-up-line text-[1rem] "></i>
+                    </div>
+                </a>
+            </div>
+            <div  class="flex w-full mt-12 ">
+                <div class="left w-1/2 hidden md:block  ">
+                    <img class="rotate-90 " src="./public/contact.png" alt="">
+                </div>
+                <div class="right w-full  md:w-1/2  flex flex-col justify-center">
+                    <div
+                        class="flex justify-between border-y-[1.5px] border-[#4f4f4f] hover:border-[#fff] text-[#4f4f4f] hover:text-[#fff]  transition-all items-center py-8 px-4 ">
+                        <h2 class="font-['monogram'] text-[1.2rem] ">EMAIL</h2>
+                        <h1 class="font-['LayMedium'] text-[2rem] text-[#fff]">dwivedi100rabhh</h1>
+                    </div>
+                    <div
+                        class="flex justify-between border-y-[1.5px] border-[#4f4f4f] hover:border-[#fff] text-[#4f4f4f] hover:text-[#fff] transition-all items-center py-8 px-4 ">
+                        <h2 class="font-['monogram'] text-[1.2rem]  ">PHONE</h2>
+                        <h1 class="font-['LayMedium'] text-[2rem] text-[#fff]">2100112233</h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" flex flex-col md:flex-row justify-between   items-start  mt-4 border-b-1">
+                <h1 class="text-[4.5rem] md:text-[9rem] font-['LaySemibold'] ">Contact</h1>
+                <a href="#home">
+                    <h2 class="uppercase font-['monogram'] text-[0.8rem] md:text-[1.2rem]">{ Back To Top } <i
+                            class="ri-arrow-up-line text-[1rem]"></i></h2>
+                </a>
+            </div>
+            <div class="w-full text-center py-2">
+                <h2>Design & Developed by Saurabh Dwivedi &copy; 2025</h2>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
